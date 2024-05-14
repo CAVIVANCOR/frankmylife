@@ -1,0 +1,43 @@
+const {DataTypes} = require("sequelize");
+module.exports = (sequelize)=>{
+    sequelize.define("Acceso",{
+        id:{
+            type:DataTypes.INTEGER,
+            autoIncrement:true,
+            primaryKey:true,
+        },
+        lectura:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:false
+        },
+        escritura:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:false
+        },
+        creacion:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:false
+        },
+        eliminacion:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:false
+        },
+        reportes:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:false
+        },
+        created:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:true
+        },
+        borradoLogico:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:false
+        },
+    },
+    {
+        timestamps:false,
+        tableName: "Acceso"
+    }
+    )
+}
