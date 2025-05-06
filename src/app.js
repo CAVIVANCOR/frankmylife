@@ -63,12 +63,12 @@ app.use('/media/sistema',express.static('media/sistema'));
 
 
 // Servir archivos estáticos del frontend en producción
-app.use(express.static(path.join(__dirname, 'frontend/dist')));
+//app.use(express.static(path.join(__dirname, 'frontend/dist')));
 
 // Redirigir todas las rutas a index.html para manejar el enrutamiento del frontend
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend/dist', 'index.html'));
-});
+//app.get('*', (req, res) => {
+//    res.sendFile(path.resolve(__dirname, 'frontend/dist', 'index.html'));
+//});
 
 
 

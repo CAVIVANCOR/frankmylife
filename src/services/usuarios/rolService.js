@@ -5,6 +5,8 @@ const regRolUsuario ={
 };
 const {where,...regRolAdmin}=regRolUsuario;
 const getAllRoles= async (isAdministrator=false)=>{
+    console.log('isAdministrator',isAdministrator);
+    console.log('regRolUsuario',regRolUsuario);
     let regRol = regRolUsuario;
     if (isAdministrator) regRol = regRolAdmin;
     let databaseRoles = await Rol.findAll(regRol);

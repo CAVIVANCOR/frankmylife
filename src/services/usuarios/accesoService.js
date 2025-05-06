@@ -17,6 +17,7 @@ const getAllAccesos= async (isAdministrator=false)=>{
 };
 
 const createAccesos = async (regAccesos)=>{
+    console.log('Estoy aqui',regAccesos);
     const transactionCrearAcceso = await Acceso.sequelize.transaction();
     try {
         //await Acceso.sequelize.query('Lock Table Acceso',{transaction:transactionCrearAcceso});

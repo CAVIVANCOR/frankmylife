@@ -1,6 +1,7 @@
 const rolService = require("../../services/usuarios/rolService");
 const { response, catchedAsync } = require("../../utils");
 const getRolesHandler = async (req,res)=>{
+    console.log('getRolesHandler',req.user);
     const results = await rolService.getAllRoles();
     response(res,201,results,"Rol");
 };
