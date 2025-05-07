@@ -9,7 +9,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors({
-    origin: process.env.SERVER_FRONTEND_URL,
+    origin: [process.env.SERVER_FRONTEND_URL, process.env.SERVER_BACKEND_URL],
     credentials: true,
     methods: ['GET', 'HEAD', 'OPTIONS', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Origin', 'Accept', 'X-Requested-With', 'Content-Type', 'Authorization', 'Access-Control-Request-Method', 'Access-Control-Request-Headers']
